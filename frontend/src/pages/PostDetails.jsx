@@ -210,7 +210,7 @@ export default function PostDetails() {
             <div
               style={{
                 width: '100%',
-                height: '360px',
+                height: 'clamp(200px, 35vh, 360px)',
                 overflow: 'hidden',
                 background: 'rgba(255,255,255,0.02)',
                 flexShrink: 0,
@@ -231,7 +231,7 @@ export default function PostDetails() {
             </div>
           )}
 
-          <div style={{ padding: '40px' }}>
+          <div className="p-5 sm:p-10">
             {/* Meta tags */}
             <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '12px', marginBottom: '20px' }}>
               <span className={badgeClass} style={{ padding: '4px 12px', borderRadius: '999px', fontSize: '11px', fontWeight: 700, fontFamily: 'Inter, sans-serif' }}>

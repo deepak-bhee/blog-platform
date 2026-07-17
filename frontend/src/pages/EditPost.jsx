@@ -160,7 +160,7 @@ export default function EditPost() {
 
         {preview ? (
           /* ── Preview Mode ── */
-          <div style={{ background: 'var(--bg-surface)', border: '1px solid var(--border)', borderRadius: '24px', padding: '40px', boxShadow: '0 8px 32px rgba(0,0,0,0.25)' }}>
+          <div className="p-5 sm:p-10" style={{ background: 'var(--bg-surface)', border: '1px solid var(--border)', borderRadius: '24px', boxShadow: '0 8px 32px rgba(0,0,0,0.25)' }}>
             <span style={{ display: 'inline-block', padding: '3px 12px', background: 'rgba(99,102,241,0.1)', border: '1px solid rgba(99,102,241,0.2)', borderRadius: '999px', fontSize: '11px', fontWeight: 700, color: '#a5b4fc', letterSpacing: '0.5px', textTransform: 'uppercase', marginBottom: '16px', fontFamily: 'Inter, sans-serif' }}>
               Preview Draft
             </span>
@@ -184,10 +184,10 @@ export default function EditPost() {
         ) : (
           /* ── Edit Form ── */
           <form onSubmit={handleSubmit} noValidate>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px', alignItems: 'start' }}>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
               
               {/* Left Side: Content Fields */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', gridColumn: 'span 2' }}>
+              <div className="lg:col-span-2" style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                 
                 {/* Title */}
                 <div style={{ background: 'var(--bg-surface)', border: '1px solid var(--border)', borderRadius: '20px', padding: '24px' }}>
@@ -242,7 +242,7 @@ export default function EditPost() {
               </div>
 
               {/* Right Side: Sidebar */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+              <div className="lg:col-span-1" style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                 
                 {/* Publish actions */}
                 <div style={{ background: 'var(--bg-surface)', border: '1px solid var(--border)', borderRadius: '20px', padding: '24px' }}>

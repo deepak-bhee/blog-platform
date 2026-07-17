@@ -119,10 +119,10 @@ export default function Profile() {
           My Profile
         </h1>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px', alignItems: 'start' }}>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
 
           {/* ── Left: Avatar & Stats Card ─────────────────── */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+          <div className="md:col-span-1" style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
 
             {/* Avatar Card */}
             <div style={{ background: 'var(--bg-surface)', border: '1px solid var(--border)', borderRadius: '20px', padding: '28px', textAlign: 'center' }}>
@@ -208,7 +208,7 @@ export default function Profile() {
           </div>
 
           {/* ── Right: Form Card ─────────────────────────────── */}
-          <div style={{ background: 'var(--bg-surface)', border: '1px solid var(--border)', borderRadius: '20px', padding: '28px' }}>
+          <div className="md:col-span-2 p-5 sm:p-7" style={{ background: 'var(--bg-surface)', border: '1px solid var(--border)', borderRadius: '20px' }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '24px', borderBottom: '1px solid var(--border)', paddingBottom: '16px' }}>
               <h2 style={{ fontSize: '18px', fontWeight: 700, color: '#f0f2f8', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Profile Details</h2>
               {!isEditing ? (

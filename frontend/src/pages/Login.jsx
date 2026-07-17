@@ -68,7 +68,7 @@ export default function Login() {
       <div className="animate-fade-in-up" style={{ width: '100%', maxWidth: '420px' }}>
 
         {/* Card */}
-        <div style={{ background: 'rgba(10,12,22,0.85)', backdropFilter: 'blur(24px)', borderRadius: '24px', border: '1px solid rgba(99,102,241,0.2)', padding: '44px 36px', boxShadow: '0 40px 80px rgba(0,0,0,0.5)' }}>
+        <div className="p-6 sm:p-10" style={{ background: 'rgba(10,12,22,0.85)', backdropFilter: 'blur(24px)', borderRadius: '24px', border: '1px solid rgba(99,102,241,0.2)', boxShadow: '0 40px 80px rgba(0,0,0,0.5)' }}>
 
           {/* Header */}
           <div style={{ textAlign: 'center', marginBottom: '36px' }}>
