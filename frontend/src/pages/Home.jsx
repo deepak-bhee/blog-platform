@@ -144,7 +144,7 @@ export default function Home() {
                 italic={true}
                 textColor="inherit"
                 className="text-gradient"
-                minFontSize={24}
+                minFontSize={16}
               />
             </div>
 

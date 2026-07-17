@@ -49,6 +49,7 @@ const Navbar = () => {
     >
       <div className="section-container" style={{ padding: scrolled ? '0 16px' : undefined, transition: 'all 0.5s ease' }}>
         <nav
+          className={scrolled ? "px-4 sm:px-7" : "px-3"}
           style={{
             display: 'flex',
             alignItems: 'center',
@@ -57,7 +58,6 @@ const Navbar = () => {
             height: scrolled ? '56px' : '64px',
             maxWidth: scrolled ? '920px' : '100%',
             margin: scrolled ? '12px auto 0' : '0 auto',
-            padding: scrolled ? '0 28px' : '0 12px',
             background: scrolled ? 'rgba(10, 10, 10, 0.85)' : 'rgba(33, 33, 33, 0)',
             border: scrolled ? '1px solid rgba(255, 255, 255, 0.08)' : '1px solid transparent',
             borderRadius: scrolled ? '999px' : '0px',
@@ -210,9 +210,23 @@ const Navbar = () => {
             className="md:hidden"
             onClick={() => setMobileOpen(o => !o)}
             aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
-            style={{ padding: '8px', borderRadius: '10px', background: 'var(--bg-surface)', border: '1px solid var(--border)', color: 'var(--text-secondary)', cursor: 'pointer' }}
+            style={{
+              padding: '8px',
+              borderRadius: '12px',
+              background: 'rgba(255, 255, 255, 0.07)',
+              border: '1px solid rgba(255, 255, 255, 0.14)',
+              color: '#ffffff',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              boxShadow: '0 4px 12px rgba(0, 0, 0, 0.2)',
+              transition: 'all 0.2s ease',
+            }}
+            onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255, 255, 255, 0.12)'; e.currentTarget.style.borderColor = 'rgba(99, 102, 241, 0.4)'; }}
+            onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255, 255, 255, 0.07)'; e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.14)'; }}
           >
-            {mobileOpen ? <X style={{ width: '18px', height: '18px' }} /> : <Menu style={{ width: '18px', height: '18px' }} />}
+            {mobileOpen ? <X style={{ width: '20px', height: '20px', color: '#a5b4fc' }} /> : <Menu style={{ width: '20px', height: '20px', color: '#f0f2f8' }} />}
           </button>
         </nav>
 
