@@ -168,10 +168,7 @@ export default function Home() {
             </div>
 
             {/* Stats */}
-            <div
-              className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-[600px] mx-auto"
-              style={tr(0.55)}
-            >
+            <div style={{ ...tr(0.55), display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(110px, 1fr))', gap: '16px', maxWidth: '600px', margin: '0 auto' }}>
               {STATS.map(({ icon: Icon, label, value }) => (
                 <div
                   key={label}
