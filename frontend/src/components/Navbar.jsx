@@ -74,11 +74,8 @@ const Navbar = () => {
 
           {/* Desktop nav links */}
           <div
-            className="hidden md:flex"
+            className="hidden md:flex items-center justify-center"
             style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
               gap: scrolled ? '24px' : '36px',
               transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
             }}
@@ -124,7 +121,7 @@ const Navbar = () => {
           </div>
 
           {/* Right side */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }} className="hidden md:flex">
+          <div className="hidden md:flex items-center" style={{ gap: '10px' }}>
             {isAuthenticated ? (
               <div style={{ position: 'relative' }}>
                 <button
@@ -223,9 +220,17 @@ const Navbar = () => {
         {mobileOpen && (
           <div
             className="md:hidden animate-slide-down"
-            style={{ borderTop: '1px solid var(--border)', paddingBottom: '16px' }}
+            style={{
+              marginTop: '10px',
+              padding: '16px 20px',
+              background: 'rgba(10, 10, 10, 0.94)',
+              backdropFilter: 'blur(20px)',
+              border: '1px solid rgba(255, 255, 255, 0.08)',
+              borderRadius: '20px',
+              boxShadow: '0 12px 32px rgba(0, 0, 0, 0.4)',
+            }}
           >
-            <div style={{ paddingTop: '12px', display: 'flex', flexDirection: 'column', gap: '4px' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
               {[...navLinks, ...authLinks].map(({ to, label, icon: Icon, end }) => (
                 <NavLink key={to} to={to} end={end} style={{ textDecoration: 'none' }}>
                   {({ isActive }) => (
