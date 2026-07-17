@@ -207,7 +207,7 @@ const Navbar = () => {
 
           {/* Mobile hamburger */}
           <button
-            className="md:hidden flex items-center justify-center"
+            className="md:!hidden flex items-center justify-center"
             onClick={() => setMobileOpen(o => !o)}
             aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
             style={{
